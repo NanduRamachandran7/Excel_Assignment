@@ -1,21 +1,20 @@
-Excel Assignment 1 - Data Exploration
-1) Sum, Count, Average:
-• What is the total price of all products in the dataset?
-• How many products are there in the dataset?
-• Calculate the average price of the products.
+# Excel Assignment 1 - Data Exploration & Analysis
 
-2) Min and Max:
-• Determine the minimum price among all products.
-• Find the maximum price among all products.
+## Overview
+This repository contains the completed **Excel Assignment 1**, focusing on exploratory data analysis, summary statistics, logical categorizations, and text manipulation on a product dataset consisting of **34 items** (Rows 2–35).
 
-3) IF Function:
-• Using an IF function, create a new column named Price Range to categorize products with a price greater than or equal to $500 as 'High Price' and others as 'Standard Price'.
+## Summary of Tasks Completed
 
-4) SUMIF and COUNTIF:
-• Calculate the total price for products in the 'Electronics' category using the SUMIF function.
-• Determine the count of products with a price less than $100 using the COUNTIF function.
+* **Summary Aggregations:** Calculated total dataset price (`$10,100.00`), total product count (`34`), and average price (`$297.06`) using `SUM`, `COUNTA`, and `AVERAGE`.
+* **Min & Max Analysis:** Determined the minimum (`$30.00`) and maximum (`$1,000.00`) product unit prices using `MIN` and `MAX`.
+* **Price Tier Categorization:** Applied an `IF` statement (`=IF(D2>=500, "High Price", "Standard Price")`) to classify products into pricing tiers.
+* **Conditional Functions:** Calculated total Electronics category price (`$8,050.00`) via `SUMIF` and counted budget items under $100 (`11`) using `COUNTIF`.
+* **Text Extraction:** Parsed structured `Product ID` codes (formatted as `DD-MMM-CC`) using text formulas:
+  * `Day`: `=LEFT(A2, 2)`
+  * `Country Code`: `=RIGHT(A2, 2)`
+  * `Month`: `=MID(A2, 4, 3)`
+* **Revenue Metrics:** Computed extended total product revenue (`$289,700.00`), total quantity sold (`900 units`), and weighted average unit price (`$321.89`) using `SUMPRODUCT`.
 
-5) Text Formatting - LEFT, RIGHT, MID:
-• Create a new column named Day with the first 2 characters of each 'Product ID' using the LEFT function.
-• Create a new column named Country Code by extracting the last 2 characters from the 'Product ID' column using the RIGHT function.
-• Create a new column named Month by extracting 4th to 6th characters from the 'Product ID' column using the MID function.
+## Files Included
+* `Excel Assignment 1 - Data Exploration.xlsx` — Excel workbook containing raw data and calculated `AnswerSheet`.
+* `Excel_Assignment_1_AnswerSheet_Documentation.docx` — Complete formula documentation guide.
