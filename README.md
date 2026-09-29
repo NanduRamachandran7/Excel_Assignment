@@ -57,10 +57,9 @@ This repository contains the completed **Excel Assignment 2**, focusing on data 
 
 
 
-#Healthcare Data Analysis & Insights
+Healthcare Data Analysis & Insights
 
-
-##Overview
+Overview
 
 A data analysis project focusing on cleaning, transforming, and visualizing healthcare data to extract actionable insights regarding patient health profiles, medical histories, and healthcare costs.
 
@@ -87,5 +86,3 @@ Files Included
 healthcare.xlsx — The complete Excel workbook containing the raw data, transformed tables, pivot summaries, and the final interactive dashboard.
 
 Healthcare_Analysis_Documentation.docx — A detailed Word document outlining all the specific Excel formulas and cleaning steps used in the project.
-
-
