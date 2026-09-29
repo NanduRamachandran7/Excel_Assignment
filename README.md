@@ -1,83 +1,66 @@
-Excel Assignment 1 - Data Exploration & Analysis
-Overview
-This repository contains the completed Excel Assignment 1, focusing on exploratory data analysis, summary statistics, logical categorizations, and text manipulation on a product dataset consisting of 34 items (Rows 2–35).
+# Excel Assignment 1 - Data Exploration & Analysis
 
-Summary of Tasks Completed
-Summary Aggregations: Calculated total dataset price ($10,100.00), total product count (34), and average price ($297.06) using SUM, COUNTA, and AVERAGE.
+## Overview
+This repository contains the completed **Excel Assignment 1**, focusing on exploratory data analysis, summary statistics, logical categorizations, and text manipulation on a product dataset consisting of **34 items** (Rows 2–35).
 
-Min & Max Analysis: Determined the minimum ($30.00) and maximum ($1,000.00) product unit prices using MIN and MAX.
+## Summary of Tasks Completed
 
-Price Tier Categorization: Applied an IF statement (=IF(D2>=500, "High Price", "Standard Price")) to classify products into pricing tiers.
+- **Summary Aggregations:** Calculated total dataset price (`$10,100.00`), total product count (`34`), and average price (`$297.06`) using `SUM`, `COUNTA`, and `AVERAGE`.
+- **Min & Max Analysis:** Determined the minimum (`$30.00`) and maximum (`$1,000.00`) product unit prices using `MIN` and `MAX`.
+- **Price Tier Categorization:** Applied an `IF` statement (`=IF(D2>=500, "High Price", "Standard Price")`) to classify products into pricing tiers.
+- **Conditional Functions:** Calculated total Electronics category price (`$8,050.00`) via `SUMIF` and counted budget items under $100 (`11`) using `COUNTIF`.
+- **Text Extraction:** Parsed structured `Product ID` codes (formatted as `DD-MMM-CC`) using text formulas:
+  * `Day`: `=LEFT(A2, 2)`
+  * `Country Code`: `=RIGHT(A2, 2)`
+  * `Month`: `=MID(A2, 4, 3)`
+- **Revenue Metrics:** Computed extended total product revenue (`$289,700.00`), total quantity sold (`900 units`), and weighted average unit price (`$321.89`) using `SUMPRODUCT`.
 
-Conditional Functions: Calculated total Electronics category price ($8,050.00) via SUMIF and counted budget items under $100 (11) using COUNTIF.
+## Files Included
+- `Excel Assignment 1 - Data Exploration.xlsx` — Excel workbook containing raw data and calculated `AnswerSheet`.
+- `Excel_Assignment_1_AnswerSheet_Documentation.docx` — Complete formula documentation guide.
 
-Text Extraction: Parsed structured Product ID codes (formatted as DD-MMM-CC) using text formulas:
+---
 
-Day: =LEFT(A2, 2)
+# Excel Assignment 2 - Data Cleaning & Transformation
 
-Country Code: =RIGHT(A2, 2)
+## Overview
+This repository contains the completed **Excel Assignment 2**, focusing on data cleaning, missing value imputation, structural data transformation, deduplication, and conditional formatting on a product dataset initially consisting of **34 items** (Rows 2–35).
 
-Month: =MID(A2, 4, 3)
+## Summary of Tasks Completed
 
-Revenue Metrics: Computed extended total product revenue ($289,700.00), total quantity sold (900 units), and weighted average unit price ($321.89) using SUMPRODUCT.
+- **Missing Value Imputation:** 
+  * Imputed missing prices for Headphones (`$250.00`) and Sunglasses (`$245.00`) using `=AVERAGEIF`.
+  * Calculated conditional median price (`$65`) for Outdoor equipment using `=MEDIAN(IF(F2:F32="Outdoor", D2:D32))` to avoid outlier distortion.
+  * Filled all 4 blank category cells with `"Not available"` using `Go To Special` -> `Blanks` (`Ctrl + G`).
+- **Text Standardization & Typo Correction:** Standardized lowercase product titles (`laptop`, `smartphone`, `headphones`) to Title Case and corrected widespread category typos (`Electroni` -> `Electronics`) using `Find & Replace` (`Ctrl + H`).
+- **Duplicate Purging:** Purged **3 exact duplicate rows** (HP Laptop, Bose Headphones, Samsonite Bag) via `Data Tab` -> `Remove Duplicates`, bringing the clean row count from **34** to **31 items**.
+- **Data Splitting & Merging:**
+  * Decomposed composite `Product ID` codes (e.g., `28-JAN-US`) into independent `Manufacturing Date` and `Country Code` columns using `Flash Fill` (`Ctrl + E`).
+  * Combined Brand Name and Product Name into a unified `Product Brand` column using `=TEXTJOIN("-", TRUE, B2, C2)`.
+- **Formatting & Visual Rules:** Standardized prices to Currency (`$#,##0`), formatted dates to `DD-MM-YYYY`, applied gradient blue `Data Bars` across Price values, and configured a `Highlight Cells Rule` for the `Electronics` category.
 
-Files Included
-Excel Assignment 1 - Data Exploration.xlsx — Excel workbook containing raw data and calculated AnswerSheet.
+## Files Included
+- `Excel Assignment 2 - Data Cleaning.xlsx` — Excel workbook containing raw data, cleaned dataset, and step-by-step formulas.
+- `Data_Cleaning_Documentation.docx` — Comprehensive step-by-step documentation report.
 
-Excel_Assignment_1_AnswerSheet_Documentation.docx — Complete formula documentation guide.
+---
 
-Excel Assignment 2 - Data Cleaning & Transformation
-Overview
-This repository contains the completed Excel Assignment 2, focusing on data cleaning, missing value imputation, structural data transformation, deduplication, and conditional formatting on a product dataset initially consisting of 34 items (Rows 2–35).
+# Healthcare Data Analysis & Insights
 
-Summary of Tasks Completed
-Missing Value Imputation:
-
-Imputed missing prices for Headphones ($250.00) and Sunglasses ($245.00) using =AVERAGEIF.
-
-Calculated conditional median price ($65) for Outdoor equipment using =MEDIAN(IF(F2:F32="Outdoor", D2:D32)) to avoid outlier distortion.
-
-Filled all 4 blank category cells with "Not available" using Go To Special -> Blanks (Ctrl + G).
-
-Text Standardization & Typo Correction: Standardized lowercase product titles (laptop, smartphone, headphones) to Title Case and corrected widespread category typos (Electroni -> Electronics) using Find & Replace (Ctrl + H).
-
-Duplicate Purging: Purged 3 exact duplicate rows (HP Laptop, Bose Headphones, Samsonite Bag) via Data Tab -> Remove Duplicates, bringing the clean row count from 34 to 31 items.
-
-Data Splitting & Merging:
-
-Decomposed composite Product ID codes (e.g., 28-JAN-US) into independent Manufacturing Date and Country Code columns using Flash Fill (Ctrl + E).
-
-Combined Brand Name and Product Name into a unified Product Brand column using =TEXTJOIN("-", TRUE, B2, C2).
-
-Formatting & Visual Rules: Standardized prices to Currency ($#,##0), formatted dates to DD-MM-YYYY, applied gradient blue Data Bars across Price values, and configured a Highlight Cells Rule for the Electronics category.
-
-Files Included
-Excel Assignment 2 - Data Cleaning.xlsx — Excel workbook containing raw data, cleaned dataset, and step-by-step formulas.
-
-Data_Cleaning_Documentation.docx — Comprehensive step-by-step documentation report.
-
-Healthcare Data Analysis & Insights
-Overview
+## Overview
 This repository contains a data analysis project focusing on cleaning, transforming, and visualizing healthcare data to extract actionable insights regarding patient health profiles, medical histories, and healthcare costs.
 
-Summary of Tasks Completed
-Data Cleaning: Handled missing dataset values by imputing the average for years, "Sep" for months, and the mode (most frequent value) for categorical fields like smoker status and hospital tier.
+## Summary of Tasks Completed
 
-Data Transformation:
+- **Data Cleaning:** Handled missing dataset values by imputing the average for years, `"Sep"` for months, and the mode (most frequent value) for categorical fields like smoker status and hospital tier.
+- **Data Transformation:** 
+  * Split unified customer names into independent `Title`, `First Name`, and `Last Name` columns.
+  * Categorized continuous numerical data into logical groups (`BMI` into Weight Status, `HbA1C` into Diabetes Status) using nested `IF` statements.
+  * Calculated patient ages from formatted Dates of Birth.
+- **Data Merging:** Consolidated three separate tables (Customer Names, Medical Examinations, Hospitalization Details) into a single master dataset using `VLOOKUP`.
+- **Exploratory Data Analysis:** Built Pivot Tables to analyze the distribution of cancer history, the impact of transplants on surgeries, and how healthcare charges vary across different hospital tiers and health conditions.
+- **Interactive Dashboard:** Created a consolidated Excel dashboard featuring Pie, Bar, and Line charts. Integrated slicers for `Weight Status` and `Diabetes Status` to allow users to dynamically filter the visualizations.
 
-Split unified customer names into independent Title, First Name, and Last Name columns.
-
-Categorized continuous numerical data into logical groups (BMI into Weight Status, HbA1C into Diabetes Status) using nested IF statements.
-
-Calculated patient ages from formatted Dates of Birth.
-
-Data Merging: Consolidated three separate tables (Customer Names, Medical Examinations, Hospitalization Details) into a single master dataset using VLOOKUP.
-
-Exploratory Data Analysis: Built Pivot Tables to analyze the distribution of cancer history, the impact of transplants on surgeries, and how healthcare charges vary across different hospital tiers and health conditions.
-
-Interactive Dashboard: Created a consolidated Excel dashboard featuring Pie, Bar, and Line charts. Integrated slicers for Weight Status and Diabetes Status to allow users to dynamically filter the visualizations.
-
-Files Included
-healthcare.xlsx — The complete Excel workbook containing the raw data, transformed tables, pivot summaries, and the final interactive dashboard.
-
-Healthcare_Analysis_Documentation.docx — A detailed Word document outlining all the specific Excel formulas and cleaning steps used in the project.
+## Files Included
+- `healthcare.xlsx` — The complete Excel workbook containing the raw data, transformed tables, pivot summaries, and the final interactive dashboard.
+- `Healthcare_Analysis_Documentation.docx` — A detailed Word document outlining all the specific Excel formulas and cleaning steps used in the project.
