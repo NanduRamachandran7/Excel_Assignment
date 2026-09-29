@@ -48,3 +48,41 @@ This repository contains the completed **Excel Assignment 2**, focusing on data 
 ## Files Included
 * `Excel Assignment 2 - Data Cleaning.xlsx` – Excel workbook containing raw data, cleaned dataset, and step-by-step formulas.
 * `Data_Cleaning_Documentation.docx` – Comprehensive step-by-step documentation report[cite: 7].
+
+
+
+
+
+
+
+
+
+Healthcare Data Analysis & Insights
+Overview
+A data analysis project focusing on cleaning, transforming, and visualizing healthcare data to extract actionable insights regarding patient health profiles, medical histories, and healthcare costs.
+
+What I Have Done
+
+Data Cleaning: Handled missing dataset values by imputing the average for years, 'Sep' for months, and the mode (most frequent value) for categorical fields like smoker status and hospital tier.
+
+Data Transformation:
+
+Split unified customer names into Title, First Name, and Last Name.
+
+Categorized continuous numerical data into logical groups (BMI into Weight Status, HbA1C into Diabetes Status) using nested IF statements.
+
+Calculated patient ages from formatted Dates of Birth.
+
+Data Merging: Consolidated three separate tables (Customer Names, Medical Examinations, Hospitalization Details) into a single master dataset using VLOOKUP.
+
+Exploratory Data Analysis: Built Pivot Tables to analyze the distribution of cancer history, the impact of transplants on surgeries, and how healthcare charges vary across different hospital tiers and health conditions.
+
+Interactive Dashboard: Created a consolidated Excel dashboard featuring Pie, Bar, and Line charts. Integrated slicers for 'Weight Status' and 'Diabetes Status' to allow users to dynamically filter the visualizations.
+
+Files Included
+
+healthcare.xlsx — The complete Excel workbook containing the raw data, transformed tables, pivot summaries, and the final interactive dashboard.
+
+Healthcare_Analysis_Documentation.docx — A detailed Word document outlining all the specific Excel formulas and cleaning steps used in the project.
+
+
